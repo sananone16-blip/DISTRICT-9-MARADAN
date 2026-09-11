@@ -396,3 +396,11 @@ footer {
         color: #fff;
     }
 }
+/* HIDE MOBILE MENU BUTTON */
+@media (max-width: 768px) {
+  .menu-toggle,
+  .hamburger,
+  button[aria-label="menu"] {
+    display: none !important;
+  }
+}
