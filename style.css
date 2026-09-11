@@ -161,6 +161,27 @@ nav a:hover { color: #00d084; }
   font-size: 16px;
   margin-top: 10px;
 }
+/* ORDER BUTTON DESIGN */
+.order-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00a651, #008f46); /* Green gradient */
+  color: #fff !important;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none !important;
+  font-weight: 800;
+  font-size: 15px;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 166, 81, 0.5);
+  background: linear-gradient(135deg, #008f46, #007a3a);
+}
 .order-btn:hover {
   background: #008f46;
 }
@@ -245,12 +266,7 @@ form input, form select, form textarea {
 .contact { background: white; }
 .contact p { margin: 10px; }
 
-.map {
-    max-width: 900px;
-    margin: 30px auto 0;
-}
 
-.map iframe { border-radius: 10px; }
 
 footer {
     background: #111827;
