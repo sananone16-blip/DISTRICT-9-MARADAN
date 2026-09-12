@@ -516,3 +516,9 @@ footer {
   border-radius: 8px;
   font-weight: 700;
 }
+/* Review Box ko center karna */
+.review-box {
+  max-width: 650px;      /* zyada chaura na ho */
+  margin: 50px auto;     /* upar neeche 50px, left right auto = center */
+  padding: 40px 30px;
+  background:
