@@ -128,6 +128,8 @@
   <span data-value="4">★</span>
   <span data-value="5">★</span>
 </div>
+        
+<input type="hidden" id="rating-value" name="rating">
 <input type="hidden" id="rating-value" name="rating">
     <h3>Select a rating</h3>
 
@@ -169,5 +171,35 @@
     });
   });
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const stars = document.querySelectorAll('.stars span');
+  const ratingInput = document.getElementById('rating-value');
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', function() {
+      let rating = this.getAttribute('data-value');
+      ratingInput.value = rating;
+
+      stars.forEach(s => s.classList.remove('active'));
+      
+      for(let i = 0; i < rating; i++) {
+        stars[i].classList.add('active');
+      }
+    });
+  });
+
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    if(ratingInput.value == "") {
+      alert("Please select rating first");
+    } else {
+      alert("Rating: " + ratingInput.value + " stars submitted!");
+    }
+  });
+
+});
+    </script>
 </body>
+    
 </html>
