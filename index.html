@@ -117,17 +117,18 @@
   <div class="review-box">
     <!-- 5 Stars -->
     <div class="star-rating">
-      <input type="radio" id="star5" name="rating" value="5" />
-      <label for="star5">★</label>
-      <input type="radio" id="star4" name="rating" value="4" />
-      <label for="star4">★</label>
-      <input type="radio" id="star3" name="rating" value="3" />
-      <label for="star3">★</label>
-      <input type="radio" id="star2" name="rating" value="2" />
-      <label for="star2">★</label>
-      <input type="radio" id="star1" name="rating" value="1" />
-      <label for="star1">★</label>
-    </div>
+      <!-- GALAT YE HAI: ○ ★ ○ ★ -->
+<input type="radio"> ★  <input type="radio"> ★
+
+<!-- SAHI YE HAI: Sirf Span -->
+<div class="stars">
+  <span data-value="1">★</span>
+  <span data-value="2">★</span>
+  <span data-value="3">★</span>
+  <span data-value="4">★</span>
+  <span data-value="5">★</span>
+</div>
+<input type="hidden" id="rating-value" name="rating">
     <h3>Select a rating</h3>
 
     <!-- Form -->
@@ -155,5 +156,18 @@
 </footer>
 
 <script src="script.js"></script>
+    <script>
+  const stars = document.querySelectorAll('.stars span');
+  const ratingInput = document.getElementById('rating-value');
+
+  stars.forEach((star, idx) => {
+    star.addEventListener('click', () => {
+      ratingInput.value = idx + 1;
+      stars.forEach((s, i) => {
+        s.classList.toggle('active', i <= idx); // click kiye hue + pehle wale yellow
+      });
+    });
+  });
+    </script>
 </body>
 </html>
