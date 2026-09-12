@@ -1,4 +1,23 @@
-* {
+.stars {
+  display: flex; /* 1 line mein */
+  justify-content: center;
+  gap: 12px;
+  font-size: 40px;
+  margin: 15px 0;
+}
+.stars span {
+  color: #ddd; /* grey star */
+  cursor: pointer;
+}
+.stars span.active,
+.stars span:hover {
+  color: #FFD700; /* yellow on click */
+}
+
+/* YE LINE ZAROORI HAI - radio hide karne ke liye */
+.review-box input[type="radio"] {
+  display: none !important;
+}* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -489,3 +508,11 @@ footer {
 #submitBtn:hover {
   background: #1d4ed8; /* dark blue on hover */
     }
+#submitBtn {
+  background: #2563eb !important; /* BLUE */
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+}
